@@ -1,0 +1,20 @@
+<div class="dashboard">
+  <h1>Blogs</h1>
+
+  {{#if posts.length}}
+    <section>
+      <h2>Your Blogs</h2>
+      <ol>
+        {{#each posts as |post|}}
+          <li>
+            <h2>
+              <a href="/post/{{id}}">{{post.title}}</a>
+            </h2>
+            <p>{{post.body}}</p>
+            <a href="/post/{{id}}">View Post</a>
+          </li>
+        {{/each}}
+      </ol>
+    </section>
+  {{/if}}
+</div>
